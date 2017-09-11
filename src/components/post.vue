@@ -43,6 +43,8 @@ export default {
 		},
 		delPost: function(post){
 			Store.del('post',post.id)
+			this.posts.splice(this.posts.indexOf(post),1)
+
 		},
 		addPost: function(){
 			this.$router.push('/user/'+this.id+'/newpost')
